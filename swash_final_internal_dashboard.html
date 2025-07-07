@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SWASH Internal Dashboard</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #eef3f7;
+    }
+    .header {
+      background-color: #0077cc;
+      color: white;
+      padding: 15px 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .header h1 {
+      margin: 0;
+      font-size: 22px;
+    }
+    .dashboard {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 20px;
+      padding: 30px;
+    }
+    .tile {
+      background: linear-gradient(145deg, #ffffff, #dce3ec);
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .tile:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    }
+    .tile i {
+      font-size: 28px;
+      margin-bottom: 12px;
+      display: block;
+      color: #0077cc;
+    }
+    .tile span {
+      font-size: 16px;
+      color: #333;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+  </style>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="header">
+    <h1>SWASH Internal Portal</h1>
+    <div>Hello, Sai Nitish Kumar Reddy! (<a href="#">Logout</a>)</div>
+  </div>
+  <div class="dashboard">
+    <a href="#"><div class="tile"><i class="fas fa-users"></i><span>Customers</span></div></a>
+    <a href="#"><div class="tile"><i class="fas fa-sms"></i><span>SMS</span></div></a>
+    <a href="#"><div class="tile"><i class="fas fa-receipt"></i><span>Receipts</span></div></a>
+    <a href="#"><div class="tile"><i class="fas fa-exclamation-triangle"></i><span>Issues</span></div></a>
+    <a href="#"><div class="tile"><i class="fas fa-clipboard-list"></i><span>Vendors</span></div></a>
+    <a href="#"><div class="tile"><i class="fas fa-boxes"></i><span>Orders</span></div></a>
+    <a href="#"><div class="tile"><i class="fas fa-map"></i><span>Routes</span></div></a>
+    <a href="#"><div class="tile"><i class="fas fa-ticket-alt"></i><span>Cleaner Tickets</span></div></a>
+    <a href="#"><div class="tile"><i class="fas fa-tasks"></i><span>Work Items</span></div></a>
+    <a href="#"><div class="tile"><i class="fas fa-search"></i><span>Garment Finder</span></div></a>
+    <a href="#"><div class="tile"><i class="fas fa-warehouse"></i><span>Receive Garments</span></div></a>
+    <a href="#"><div class="tile"><i class="fas fa-car"></i><span>Valets</span></div></a>
+    <a href="#"><div class="tile"><i class="fas fa-comment-dots"></i><span>Valet Feedback</span></div></a>
+    <a href="#"><div class="tile"><i class="fas fa-tools"></i><span>Internal Feedback Tools</span></div></a>
+    <a href="#"><div class="tile"><i class="fas fa-shipping-fast"></i><span>Delivery Prep Dashboard</span></div></a>
+    <a href="#"><div class="tile"><i class="fas fa-credit-card"></i><span>Payments</span></div></a>
+    <a href="#"><div class="tile"><i class="fas fa-broadcast-tower"></i><span>Dispatch</span></div></a>
+    <a href="#"><div class="tile"><i class="fas fa-tags"></i><span>Bag Tags</span></div></a>
+    <a href="#"><div class="tile"><i class="fas fa-ruler-combined"></i><span>Racks</span></div></a>
+    <a href="#"><div class="tile"><i class="fas fa-qrcode"></i><span>Scans</span></div></a>
+    <a href="#"><div class="tile"><i class="fas fa-truck-loading"></i><span>Rack Load-Out</span></div></a>
+    <a href="#"><div class="tile"><i class="fas fa-truck"></i><span>Rack Load-In</span></div></a>
+    <a href="#"><div class="tile"><i class="fas fa-cogs"></i><span>Admin</span></div></a>
+    <a href="#"><div class="tile"><i class="fas fa-envelope"></i><span>Email Previews</span></div></a>
+    <a href="#"><div class="tile"><i class="fas fa-book"></i><span>Internal SOP Guide</span></div></a>
+    <a href="#"><div class="tile"><i class="fas fa-chart-pie"></i><span>Reports</span></div></a>
+    <a href="#"><div class="tile"><i class="fas fa-user-cog"></i><span>HR</span></div></a>
+  </div>
+</body>
+</html>
