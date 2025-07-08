@@ -1,0 +1,156 @@
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+  <h1 class="h2">Reports & Analytics</h1>
+  <div class="btn-toolbar mb-2 mb-md-0">
+    <button type="button" class="btn btn-outline-secondary">
+      <i class="fas fa-download"></i> Export
+    </button>
+  </div>
+</div>
+
+<!-- Summary Cards -->
+<div class="row mb-4">
+  <div class="col-md-3">
+    <div class="card text-white bg-primary">
+      <div class="card-body text-center">
+        <h3><%= reports.dailyOrders %></h3>
+        <p class="mb-0">Daily Orders</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="card text-white bg-success">
+      <div class="card-body text-center">
+        <h3>$<%= reports.monthlyRevenue.toLocaleString() %></h3>
+        <p class="mb-0">Monthly Revenue</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="card text-white bg-info">
+      <div class="card-body text-center">
+        <h3><%= reports.activeCustomers %></h3>
+        <p class="mb-0">Active Customers</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="card text-white bg-warning">
+      <div class="card-body text-center">
+        <h3><%= reports.pendingIssues %></h3>
+        <p class="mb-0">Pending Issues</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Charts Section -->
+<div class="row">
+  <div class="col-md-6">
+    <div class="card">
+      <div class="card-header">
+        <h5 class="card-title">Order Status Distribution</h5>
+      </div>
+      <div class="card-body">
+        <canvas id="orderStatusChart" width="400" height="200"></canvas>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="card">
+      <div class="card-header">
+        <h5 class="card-title">Revenue Trend</h5>
+      </div>
+      <div class="card-body">
+        <canvas id="revenueChart" width="400" height="200"></canvas>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row mt-4">
+  <div class="col-12">
+    <div class="card">
+      <div class="card-header">
+        <h5 class="card-title">Recent Orders</h5>
+      </div>
+      <div class="card-body">
+        <div class="table-responsive">
+          <table class="table table-sm">
+            <thead>
+              <tr>
+                <th>Order ID</th>
+                <th>Customer</th>
+                <th>Service</th>
+                <th>Status</th>
+                <th>Date</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% orders.forEach(order => { %>
+                <tr>
+                  <td>#<%= order.id %></td>
+                  <td><%= order.customer %></td>
+                  <td><%= order.service %></td>
+                  <td>
+                    <% if (order.status === 'Completed') { %>
+                      <span class="badge bg-success"><%= order.status %></span>
+                    <% } else if (order.status === 'In Progress') { %>
+                      <span class="badge bg-warning"><%= order.status %></span>
+                    <% } else { %>
+                      <span class="badge bg-secondary"><%= order.status %></span>
+                    <% } %>
+                  </td>
+                  <td><%= order.date %></td>
+                </tr>
+              <% }); %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+// Order Status Chart
+const ctx1 = document.getElementById('orderStatusChart').getContext('2d');
+new Chart(ctx1, {
+    type: 'doughnut',
+    data: {
+        labels: ['Completed', 'In Progress', 'Pending'],
+        datasets: [{
+            data: [12, 8, 3],
+            backgroundColor: ['#28a745', '#ffc107', '#6c757d']
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false
+    }
+});
+
+// Revenue Chart
+const ctx2 = document.getElementById('revenueChart').getContext('2d');
+new Chart(ctx2, {
+    type: 'line',
+    data: {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+        datasets: [{
+            label: 'Revenue',
+            data: [8000, 9500, 11000, 10500, 12000, 12500],
+            borderColor: '#007bff',
+            tension: 0.1
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+</script>

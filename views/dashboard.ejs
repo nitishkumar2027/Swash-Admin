@@ -1,0 +1,264 @@
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+  <h1 class="h2">Dashboard</h1>
+</div>
+
+<!-- Statistics Cards -->
+<div class="row mb-4">
+  <div class="col-md-3">
+    <div class="card text-white bg-success">
+      <div class="card-body">
+        <div class="d-flex justify-content-between">
+          <div>
+            <h4><%= reports.dailyOrders %></h4>
+            <p class="card-text">Daily Orders</p>
+          </div>
+          <div class="align-self-center">
+            <i class="fas fa-clipboard-list fa-2x"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="card text-white bg-info">
+      <div class="card-body">
+        <div class="d-flex justify-content-between">
+          <div>
+            <h4>$<%= reports.monthlyRevenue.toLocaleString() %></h4>
+            <p class="card-text">Monthly Revenue</p>
+          </div>
+          <div class="align-self-center">
+            <i class="fas fa-dollar-sign fa-2x"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="card text-white bg-primary">
+      <div class="card-body">
+        <div class="d-flex justify-content-between">
+          <div>
+            <h4><%= reports.activeCustomers %></h4>
+            <p class="card-text">Active Customers</p>
+          </div>
+          <div class="align-self-center">
+            <i class="fas fa-users fa-2x"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="card text-white bg-warning">
+      <div class="card-body">
+        <div class="d-flex justify-content-between">
+          <div>
+            <h4><%= reports.pendingIssues %></h4>
+            <p class="card-text">Pending Issues</p>
+          </div>
+          <div class="align-self-center">
+            <i class="fas fa-exclamation-triangle fa-2x"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Dashboard Tiles -->
+<div class="row">
+  <div class="col-12">
+    <h3 class="mb-3">Quick Access</h3>
+    <div class="dashboard-tiles">
+      <a href="/customers" class="tile-link">
+        <div class="dashboard-tile">
+          <i class="fas fa-users"></i>
+          <span>Customers</span>
+        </div>
+      </a>
+      
+      <a href="/sms" class="tile-link">
+        <div class="dashboard-tile">
+          <i class="fas fa-sms"></i>
+          <span>SMS</span>
+        </div>
+      </a>
+      
+      <a href="/receipts" class="tile-link">
+        <div class="dashboard-tile">
+          <i class="fas fa-receipt"></i>
+          <span>Receipts</span>
+        </div>
+      </a>
+      
+      <a href="/issues" class="tile-link">
+        <div class="dashboard-tile">
+          <i class="fas fa-exclamation-triangle"></i>
+          <span>Issues</span>
+        </div>
+      </a>
+      
+      <a href="/vendors" class="tile-link">
+        <div class="dashboard-tile">
+          <i class="fas fa-clipboard-list"></i>
+          <span>Vendors</span>
+        </div>
+      </a>
+      
+      <a href="/orders" class="tile-link">
+        <div class="dashboard-tile">
+          <i class="fas fa-boxes"></i>
+          <span>Orders</span>
+        </div>
+      </a>
+      
+      <a href="/routes" class="tile-link">
+        <div class="dashboard-tile">
+          <i class="fas fa-map"></i>
+          <span>Routes</span>
+        </div>
+      </a>
+      
+      <a href="/cleaner-tickets" class="tile-link">
+        <div class="dashboard-tile">
+          <i class="fas fa-ticket-alt"></i>
+          <span>Cleaner Tickets</span>
+        </div>
+      </a>
+      
+      <a href="/work-items" class="tile-link">
+        <div class="dashboard-tile">
+          <i class="fas fa-tasks"></i>
+          <span>Work Items</span>
+        </div>
+      </a>
+      
+      <a href="/garment-finder" class="tile-link">
+        <div class="dashboard-tile">
+          <i class="fas fa-search"></i>
+          <span>Garment Finder</span>
+        </div>
+      </a>
+      
+      <a href="/receive-garments" class="tile-link">
+        <div class="dashboard-tile">
+          <i class="fas fa-warehouse"></i>
+          <span>Receive Garments</span>
+        </div>
+      </a>
+      
+      <a href="/valets" class="tile-link">
+        <div class="dashboard-tile">
+          <i class="fas fa-car"></i>
+          <span>Valets</span>
+        </div>
+      </a>
+      
+      <a href="/valet-feedback" class="tile-link">
+        <div class="dashboard-tile">
+          <i class="fas fa-comment-dots"></i>
+          <span>Valet Feedback</span>
+        </div>
+      </a>
+      
+      <a href="/internal-feedback-tools" class="tile-link">
+        <div class="dashboard-tile">
+          <i class="fas fa-tools"></i>
+          <span>Internal Feedback Tools</span>
+        </div>
+      </a>
+      
+      <a href="/delivery-prep" class="tile-link">
+        <div class="dashboard-tile">
+          <i class="fas fa-shipping-fast"></i>
+          <span>Delivery Prep Dashboard</span>
+        </div>
+      </a>
+      
+      <a href="/payments" class="tile-link">
+        <div class="dashboard-tile">
+          <i class="fas fa-credit-card"></i>
+          <span>Payments</span>
+        </div>
+      </a>
+      
+      <a href="/dispatch" class="tile-link">
+        <div class="dashboard-tile">
+          <i class="fas fa-broadcast-tower"></i>
+          <span>Dispatch</span>
+        </div>
+      </a>
+      
+      <a href="/bag-tags" class="tile-link">
+        <div class="dashboard-tile">
+          <i class="fas fa-tags"></i>
+          <span>Bag Tags</span>
+        </div>
+      </a>
+      
+      <a href="/racks" class="tile-link">
+        <div class="dashboard-tile">
+          <i class="fas fa-ruler-combined"></i>
+          <span>Racks</span>
+        </div>
+      </a>
+      
+      <a href="/scans" class="tile-link">
+        <div class="dashboard-tile">
+          <i class="fas fa-qrcode"></i>
+          <span>Scans</span>
+        </div>
+      </a>
+      
+      <a href="/rack-load-out" class="tile-link">
+        <div class="dashboard-tile">
+          <i class="fas fa-truck-loading"></i>
+          <span>Rack Load-Out</span>
+        </div>
+      </a>
+      
+      <a href="/rack-load-in" class="tile-link">
+        <div class="dashboard-tile">
+          <i class="fas fa-truck"></i>
+          <span>Rack Load-In</span>
+        </div>
+      </a>
+      
+      <a href="/admin" class="tile-link">
+        <div class="dashboard-tile">
+          <i class="fas fa-cogs"></i>
+          <span>Admin</span>
+        </div>
+      </a>
+      
+      <a href="/email-previews" class="tile-link">
+        <div class="dashboard-tile">
+          <i class="fas fa-envelope"></i>
+          <span>Email Previews</span>
+        </div>
+      </a>
+      
+      <a href="/sop-guide" class="tile-link">
+        <div class="dashboard-tile">
+          <i class="fas fa-book"></i>
+          <span>Internal SOP Guide</span>
+        </div>
+      </a>
+      
+      <a href="/reports" class="tile-link">
+        <div class="dashboard-tile">
+          <i class="fas fa-chart-pie"></i>
+          <span>Reports</span>
+        </div>
+      </a>
+      
+      <a href="/hr" class="tile-link">
+        <div class="dashboard-tile">
+          <i class="fas fa-user-cog"></i>
+          <span>HR</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>

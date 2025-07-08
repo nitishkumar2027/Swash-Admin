@@ -1,0 +1,56 @@
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+  <h1 class="h2"><%= title %></h1>
+</div>
+
+<div class="row">
+  <div class="col-12">
+    <div class="card">
+      <div class="card-body text-center py-5">
+        <i class="fas fa-tools fa-3x text-muted mb-3"></i>
+        <h3 class="text-muted">Under Development</h3>
+        <p class="text-muted">The <strong><%= title %></strong> section is currently under development.</p>
+        <p class="text-muted">This page will contain functionality for managing <%= title.toLowerCase() %>.</p>
+        <button class="btn btn-primary mt-3" onclick="history.back()">
+          <i class="fas fa-arrow-left"></i> Go Back
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row mt-4">
+  <div class="col-md-6">
+    <div class="card">
+      <div class="card-header">
+        <h5 class="card-title">Quick Actions</h5>
+      </div>
+      <div class="card-body">
+        <div class="list-group list-group-flush">
+          <a href="#" class="list-group-item list-group-item-action">
+            <i class="fas fa-plus"></i> Add New Item
+          </a>
+          <a href="#" class="list-group-item list-group-item-action">
+            <i class="fas fa-search"></i> Search Items
+          </a>
+          <a href="#" class="list-group-item list-group-item-action">
+            <i class="fas fa-filter"></i> Filter Items
+          </a>
+          <a href="#" class="list-group-item list-group-item-action">
+            <i class="fas fa-download"></i> Export Data
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="card">
+      <div class="card-header">
+        <h5 class="card-title">Recent Activity</h5>
+      </div>
+      <div class="card-body">
+        <p class="text-muted">No recent activity to display.</p>
+        <p class="text-muted">Activity will appear here once the <%= title.toLowerCase() %> functionality is implemented.</p>
+      </div>
+    </div>
+  </div>
+</div>

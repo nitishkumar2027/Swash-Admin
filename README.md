@@ -1,99 +1,182 @@
-# Swash
-Startup plan
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SWASH Internal Dashboard</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #eef3f7;
-    }
-    .header {
-      background-color: #0077cc;
-      color: white;
-      padding: 15px 25px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-    .header h1 {
-      margin: 0;
-      font-size: 22px;
-    }
-    .dashboard {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-      gap: 20px;
-      padding: 30px;
-    }
-    .tile {
-      background: linear-gradient(145deg, #ffffff, #dce3ec);
-      border-radius: 10px;
-      padding: 20px;
-      text-align: center;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-    .tile:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
-    }
-    .tile i {
-      font-size: 28px;
-      margin-bottom: 12px;
-      display: block;
-      color: #0077cc;
-    }
-    .tile span {
-      font-size: 16px;
-      color: #333;
-    }
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-  </style>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-</head>
-<body>
-  <div class="header">
-    <h1>SWASH Internal Portal</h1>
-    <div>Hello, Sai Nitish Kumar Reddy! (<a href="#">Logout</a>)</div>
-  </div>
-  <div class="dashboard">
-    <a href="#"><div class="tile"><i class="fas fa-users"></i><span>Customers</span></div></a>
-    <a href="#"><div class="tile"><i class="fas fa-sms"></i><span>SMS</span></div></a>
-    <a href="#"><div class="tile"><i class="fas fa-receipt"></i><span>Receipts</span></div></a>
-    <a href="#"><div class="tile"><i class="fas fa-exclamation-triangle"></i><span>Issues</span></div></a>
-    <a href="#"><div class="tile"><i class="fas fa-clipboard-list"></i><span>Vendors</span></div></a>
-    <a href="#"><div class="tile"><i class="fas fa-boxes"></i><span>Orders</span></div></a>
-    <a href="#"><div class="tile"><i class="fas fa-map"></i><span>Routes</span></div></a>
-    <a href="#"><div class="tile"><i class="fas fa-ticket-alt"></i><span>Cleaner Tickets</span></div></a>
-    <a href="#"><div class="tile"><i class="fas fa-tasks"></i><span>Work Items</span></div></a>
-    <a href="#"><div class="tile"><i class="fas fa-search"></i><span>Garment Finder</span></div></a>
-    <a href="#"><div class="tile"><i class="fas fa-warehouse"></i><span>Receive Garments</span></div></a>
-    <a href="#"><div class="tile"><i class="fas fa-car"></i><span>Valets</span></div></a>
-    <a href="#"><div class="tile"><i class="fas fa-comment-dots"></i><span>Valet Feedback</span></div></a>
-    <a href="#"><div class="tile"><i class="fas fa-tools"></i><span>Internal Feedback Tools</span></div></a>
-    <a href="#"><div class="tile"><i class="fas fa-shipping-fast"></i><span>Delivery Prep Dashboard</span></div></a>
-    <a href="#"><div class="tile"><i class="fas fa-credit-card"></i><span>Payments</span></div></a>
-    <a href="#"><div class="tile"><i class="fas fa-broadcast-tower"></i><span>Dispatch</span></div></a>
-    <a href="#"><div class="tile"><i class="fas fa-tags"></i><span>Bag Tags</span></div></a>
-    <a href="#"><div class="tile"><i class="fas fa-ruler-combined"></i><span>Racks</span></div></a>
-    <a href="#"><div class="tile"><i class="fas fa-qrcode"></i><span>Scans</span></div></a>
-    <a href="#"><div class="tile"><i class="fas fa-truck-loading"></i><span>Rack Load-Out</span></div></a>
-    <a href="#"><div class="tile"><i class="fas fa-truck"></i><span>Rack Load-In</span></div></a>
-    <a href="#"><div class="tile"><i class="fas fa-cogs"></i><span>Admin</span></div></a>
-    <a href="#"><div class="tile"><i class="fas fa-envelope"></i><span>Email Previews</span></div></a>
-    <a href="#"><div class="tile"><i class="fas fa-book"></i><span>Internal SOP Guide</span></div></a>
-    <a href="#"><div class="tile"><i class="fas fa-chart-pie"></i><span>Reports</span></div></a>
-    <a href="#"><div class="tile"><i class="fas fa-user-cog"></i><span>HR</span></div></a>
-  </div>
-</body>
-</html>
+# SWASH Admin Dashboard
+
+A modern, fully functional web-based admin dashboard for SWASH - a laundry and dry cleaning service management system.
+
+## 🚀 Features
+
+- **Modern UI/UX**: Clean, responsive design using Bootstrap 5 and custom CSS
+- **Dashboard Overview**: Real-time statistics and metrics
+- **Customer Management**: View, search, and manage customer information
+- **Order Tracking**: Track orders with different statuses and services
+- **Valet Management**: Manage delivery valets with route assignments
+- **Analytics & Reports**: Interactive charts and data visualization
+- **Responsive Design**: Works on desktop, tablet, and mobile devices
+- **Real-time Updates**: Auto-refreshing data every 30 seconds
+- **Search Functionality**: Global search across all data tables
+- **Navigation**: Sidebar navigation with active page highlighting
+
+## 🛠️ Technology Stack
+
+- **Backend**: Node.js with Express.js
+- **Template Engine**: EJS (Embedded JavaScript)
+- **Frontend**: Bootstrap 5, Font Awesome icons, Chart.js
+- **Styling**: Custom CSS with modern design patterns
+- **JavaScript**: Vanilla JS with modern ES6+ features
+
+## 📋 Dashboard Sections
+
+The dashboard includes access to all major business functions:
+
+- **Customers**: Customer database management
+- **Orders**: Order processing and tracking
+- **Valets**: Delivery personnel management
+- **SMS**: Communication system
+- **Receipts**: Receipt management
+- **Issues**: Problem tracking and resolution
+- **Vendors**: Vendor relationship management
+- **Routes**: Delivery route optimization
+- **Reports**: Business analytics and reporting
+- **And many more...**
+
+## 🚀 Quick Start
+
+### Prerequisites
+
+- Node.js (v14 or higher)
+- npm (comes with Node.js)
+
+### Installation
+
+1. **Clone or download the project**
+   ```bash
+   cd /workspace
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Start the server**
+   ```bash
+   npm start
+   ```
+
+4. **Access the dashboard**
+   ```
+   Open your browser and navigate to: http://localhost:3000
+   ```
+
+### Development Mode
+
+For development with auto-restart on file changes:
+
+```bash
+npm run dev
+```
+
+## 📁 Project Structure
+
+```
+swash-admin-dashboard/
+├── server.js              # Main Express server
+├── package.json           # Dependencies and scripts
+├── views/                 # EJS templates
+│   ├── layout.ejs        # Main layout template
+│   ├── dashboard.ejs     # Dashboard home page
+│   ├── customers.ejs     # Customer management
+│   ├── orders.ejs        # Order management
+│   ├── valets.ejs        # Valet management
+│   ├── reports.ejs       # Analytics & reports
+│   └── section.ejs       # Generic section template
+├── public/               # Static assets
+│   ├── css/
+│   │   └── main.css      # Custom styles
+│   └── js/
+│       └── main.js       # Frontend JavaScript
+└── README.md            # This file
+```
+
+## 🔧 Configuration
+
+### Port Configuration
+
+The server runs on port 3000 by default. You can change this by setting the PORT environment variable:
+
+```bash
+PORT=8080 npm start
+```
+
+### Mock Data
+
+The application currently uses mock data for demonstration. In a production environment, you would:
+
+1. Connect to a real database (MongoDB, PostgreSQL, etc.)
+2. Replace mock data with actual database queries
+3. Add authentication and authorization
+4. Implement real-time notifications
+
+## 🎨 UI Features
+
+- **Responsive Grid Layout**: Dashboard tiles adapt to screen size
+- **Interactive Elements**: Hover effects and smooth transitions
+- **Status Indicators**: Color-coded badges for different states
+- **Search & Filter**: Real-time search across data tables
+- **Charts & Graphs**: Interactive data visualization
+- **Loading States**: Visual feedback for async operations
+- **Notifications**: Toast notifications for user feedback
+
+## 🔐 Security Considerations
+
+For production deployment, consider implementing:
+
+- User authentication and authorization
+- HTTPS/SSL certificates
+- Input validation and sanitization
+- Rate limiting
+- CORS configuration
+- Environment variable management
+- Database security
+
+## 📱 Browser Support
+
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+- Mobile browsers
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Test thoroughly
+5. Submit a pull request
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+## 🆘 Support
+
+For support or questions:
+- Check the console for error messages
+- Ensure all dependencies are installed
+- Verify Node.js version compatibility
+- Check that port 3000 is available
+
+## 🔄 Future Enhancements
+
+- Real database integration
+- User authentication system
+- Real-time notifications with WebSockets
+- Advanced reporting and analytics
+- Mobile app companion
+- API documentation
+- Automated testing
+- Docker containerization
+
+---
+
+**Built with ❤️ for SWASH Internal Operations**

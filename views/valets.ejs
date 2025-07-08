@@ -1,0 +1,61 @@
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+  <h1 class="h2">Valets</h1>
+  <div class="btn-toolbar mb-2 mb-md-0">
+    <button type="button" class="btn btn-primary">
+      <i class="fas fa-plus"></i> Add Valet
+    </button>
+  </div>
+</div>
+
+<div class="row mb-4">
+  <div class="col-md-4">
+    <select class="form-select">
+      <option selected>All Routes</option>
+      <option value="downtown">Downtown</option>
+      <option value="uptown">Uptown</option>
+      <option value="suburbs">Suburbs</option>
+    </select>
+  </div>
+  <div class="col-md-4">
+    <select class="form-select">
+      <option selected>All Status</option>
+      <option value="active">Active</option>
+      <option value="off-duty">Off Duty</option>
+    </select>
+  </div>
+</div>
+
+<div class="row">
+  <% valets.forEach(valet => { %>
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">
+            <i class="fas fa-user"></i> <%= valet.name %>
+          </h5>
+          <p class="card-text">
+            <strong>Route:</strong> <%= valet.route %><br>
+            <strong>Deliveries:</strong> <%= valet.deliveries %><br>
+            <strong>Status:</strong> 
+            <% if (valet.status === 'Active') { %>
+              <span class="badge bg-success"><%= valet.status %></span>
+            <% } else { %>
+              <span class="badge bg-secondary"><%= valet.status %></span>
+            <% } %>
+          </p>
+          <div class="btn-group" role="group">
+            <button type="button" class="btn btn-outline-primary btn-sm">
+              <i class="fas fa-eye"></i> View
+            </button>
+            <button type="button" class="btn btn-outline-warning btn-sm">
+              <i class="fas fa-edit"></i> Edit
+            </button>
+            <button type="button" class="btn btn-outline-info btn-sm">
+              <i class="fas fa-map"></i> Track
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% }); %>
+</div>
