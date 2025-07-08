@@ -148,8 +148,15 @@ sections.forEach(section => {
 });
 
 app.listen(PORT, '0.0.0.0', () => {
-  console.log(`🚀 SWASH Admin Dashboard running on http://localhost:${PORT}`);
-  console.log(`📊 Access your dashboard at http://localhost:${PORT}`);
-  console.log(`🌐 External access: http://0.0.0.0:${PORT}`);
-  console.log(`🔗 If in a workspace, check your ports panel for the public URL`);
+  console.log(`🚀 SWASH Admin Dashboard is now RUNNING!`);
+  console.log(`📊 Port: ${PORT}`);
+  console.log(`🌐 Server bound to all interfaces (0.0.0.0:${PORT})`);
+  console.log(``);
+  console.log(`🎯 HOW TO ACCESS YOUR DASHBOARD:`);
+  console.log(`   1. In Cursor/VS Code: Check the PORTS panel (bottom of screen)`);
+  console.log(`   2. Look for Port ${PORT} and click the 🌐 "Open in Browser" icon`);
+  console.log(`   3. Or check your workspace for a "Preview" button`);
+  console.log(`   4. If local: http://localhost:${PORT}`);
+  console.log(``);
+  console.log(`✅ Server Status: READY FOR CONNECTIONS`);
 });
