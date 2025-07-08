@@ -1,0 +1,9 @@
+nohup: ignoring input
+
+> swash-admin-dashboard@1.0.0 start
+> node server.js
+
+🚀 SWASH Admin Dashboard running on http://localhost:3000
+📊 Access your dashboard at http://localhost:3000
+🌐 External access: http://0.0.0.0:3000
+🔗 If in a workspace, check your ports panel for the public URL
