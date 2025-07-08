@@ -147,7 +147,9 @@ sections.forEach(section => {
   });
 });
 
-app.listen(PORT, () => {
+app.listen(PORT, '0.0.0.0', () => {
   console.log(`🚀 SWASH Admin Dashboard running on http://localhost:${PORT}`);
   console.log(`📊 Access your dashboard at http://localhost:${PORT}`);
+  console.log(`🌐 External access: http://0.0.0.0:${PORT}`);
+  console.log(`🔗 If in a workspace, check your ports panel for the public URL`);
 });
